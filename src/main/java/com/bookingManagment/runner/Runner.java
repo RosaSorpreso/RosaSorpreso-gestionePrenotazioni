@@ -77,7 +77,7 @@ public class Runner implements CommandLineRunner {
                     .withBuilding(building0)
                     .withDescription("Sala usata per fare le riunioni")
                     .withMaxUser(4)
-                    .withTypeOfWorkStation(WorkstationType.PRIVATE)
+                    .withWorkstationType(WorkstationType.PRIVATE)
                     .build();
 
             Workstation workstation1 = Workstation.builder()
@@ -85,7 +85,7 @@ public class Runner implements CommandLineRunner {
                     .withBuilding(building0)
                     .withDescription("Sala usata")
                     .withMaxUser(9)
-                    .withTypeOfWorkStation(WorkstationType.OPEN_SPACE)
+                    .withWorkstationType(WorkstationType.OPEN_SPACE)
                     .build();
 
             Workstation workstation2 = Workstation.builder()
@@ -93,7 +93,7 @@ public class Runner implements CommandLineRunner {
                     .withBuilding(building0)
                     .withDescription("Sala")
                     .withMaxUser(2)
-                    .withTypeOfWorkStation(WorkstationType.MEETING_ROOM)
+                    .withWorkstationType(WorkstationType.MEETING_ROOM)
                     .build();
 
             buildingRepository.save(building0);
