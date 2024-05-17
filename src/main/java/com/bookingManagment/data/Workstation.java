@@ -16,9 +16,11 @@ public class Workstation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "description")
     private String description;
     @Enumerated(EnumType.STRING)
     private WorkstationType workstationType;
+    @Column(name = "max_user")
     private int maxUser;
 
     @ManyToOne

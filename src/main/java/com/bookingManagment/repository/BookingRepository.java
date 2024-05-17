@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface BookingRepository extends JpaRepository<Booking, Integer> {
-    List<Booking> findByUserAndDate (User user, LocalDate date);
-    boolean existsByWorkstationAndDate (Workstation workstation, LocalDate date);
+    List<Booking> findByUserAndBookingDate (User user, LocalDate bookingDate);
+    boolean existsByWorkstationAndBookingDate (Workstation workstation, LocalDate bookingDate);
+    boolean existsByUserAndBookingDate (User user, LocalDate bookingDate);
 }
