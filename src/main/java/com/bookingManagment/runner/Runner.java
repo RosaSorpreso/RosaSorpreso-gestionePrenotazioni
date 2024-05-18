@@ -1,9 +1,7 @@
 package com.bookingManagment.runner;
 
-import com.bookingManagment.data.Building;
-import com.bookingManagment.data.User;
-import com.bookingManagment.data.Workstation;
-import com.bookingManagment.data.WorkstationType;
+
+import com.bookingManagment.data.*;
 import com.bookingManagment.repository.BookingRepository;
 import com.bookingManagment.repository.BuildingRepository;
 import com.bookingManagment.repository.UserRepository;
