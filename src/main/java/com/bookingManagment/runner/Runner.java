@@ -34,46 +34,46 @@ public class Runner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         try {
             Building building0 = Building.builder()
-                    .withName("Metting room")
-                    .withAddress("Via le mani dal naso 10")
+                    .withName("Office")
+                    .withAddress("Via Roma 10")
                     .withCity("Roma")
                     .build();
 
             Building building1 = Building.builder()
-                    .withName("Main Office")
-                    .withAddress("Via dei Mille 145")
-                    .withCity("Roma")
+                    .withName("Office2")
+                    .withAddress("Via Aldo Moro 145")
+                    .withCity("Napoli")
                     .build();
 
             Building building2 = Building.builder()
-                    .withName("Secondary Office")
-                    .withAddress("Via dei Partigiani 123")
-                    .withCity("Roma")
+                    .withName("Office3")
+                    .withAddress("Via dei Pomodori 123")
+                    .withCity("Genova")
                     .build();
 
             User user0 = User.builder()
                     .withId(1L)
-                    .withFullName("Franz Natavio")
-                    .withEmail("franz@natavio.com")
-                    .withUserName("0")
+                    .withFullName("Diego Sorpreso")
+                    .withEmail("diego@sorpreso.com")
+                    .withUserName("diego_cane")
                     .build();
             User user1 = User.builder()
                     .withId(2L)
                     .withFullName("Rosa Sorpreso")
                     .withEmail("rosa@sorpreso.com")
-                    .withUserName("1")
+                    .withUserName("rosa01")
                     .build();
             User user2 = User.builder()
                     .withId(3L)
-                    .withFullName("Simone Giarnera")
-                    .withEmail("simone@Giarnera.com")
-                    .withUserName("MastrOdio")
+                    .withFullName("Giovanni Muciaccia")
+                    .withEmail("giovanni@muciaccia.com")
+                    .withUserName("art_attack")
                     .build();
 
             Workstation workstation0 = Workstation.builder()
                     .withId(1L)
                     .withBuilding(building0)
-                    .withDescription("Sala usata per fare le riunioni")
+                    .withDescription("Sala privata")
                     .withMaxUser(4)
                     .withWorkstationType(WorkstationType.PRIVATE)
                     .build();
@@ -81,7 +81,7 @@ public class Runner implements CommandLineRunner {
             Workstation workstation1 = Workstation.builder()
                     .withId(2L)
                     .withBuilding(building0)
-                    .withDescription("Sala usata")
+                    .withDescription("Sala open space")
                     .withMaxUser(9)
                     .withWorkstationType(WorkstationType.OPEN_SPACE)
                     .build();
@@ -89,7 +89,7 @@ public class Runner implements CommandLineRunner {
             Workstation workstation2 = Workstation.builder()
                     .withId(3L)
                     .withBuilding(building0)
-                    .withDescription("Sala")
+                    .withDescription("meeting room")
                     .withMaxUser(2)
                     .withWorkstationType(WorkstationType.MEETING_ROOM)
                     .build();
@@ -104,16 +104,13 @@ public class Runner implements CommandLineRunner {
             workstationRepository.save(workstation1);
             workstationRepository.save(workstation2);
 
-            System.out.println("edifici salvati correttamente");
-            System.out.println("user salvati correttamente");
-            System.out.println("postazioni salvati correttamente");
+            System.out.println("buildings successfully saved");
+            System.out.println("users successfully saved");
+            System.out.println("workstations successfully saved");
 
 
-//            reservationService.createReservation(user1.getId(),workstation0.getId(), LocalDate.now());
         } catch (Exception e) {
             throw new RuntimeException(e);
-        } finally {
-            System.out.println("Ciao, risparmiami");
         }
 
     }
