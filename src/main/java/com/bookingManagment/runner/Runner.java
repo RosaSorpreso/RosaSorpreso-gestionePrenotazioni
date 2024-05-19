@@ -104,16 +104,9 @@ public class Runner implements CommandLineRunner {
             workstationRepository.save(workstation1);
             workstationRepository.save(workstation2);
 
-            bookingService.createBooking(user1.getId(),workstation0.getId(), LocalDate.now().plusYears(1));
-            bookingService.createBooking(user0.getId(), workstation2.getId(), LocalDate.now().plusMonths(1));
-            bookingService.createBooking(user2.getId(), workstation1.getId(), LocalDate.now().plusDays(1));
-
             System.out.println("edifici salvati correttamente");
             System.out.println("user salvati correttamente");
             System.out.println("postazioni salvati correttamente");
-            System.out.println(bookingService.createBooking(user1.getId(),workstation0.getId(), LocalDate.now()));
-            System.out.println(bookingService.createBooking(user0.getId(),workstation2.getId(), LocalDate.now()));
-            System.out.println(bookingService.createBooking(user2.getId(), workstation1.getId(), LocalDate.now().plusDays(1)));
 
 
 //            reservationService.createReservation(user1.getId(),workstation0.getId(), LocalDate.now());
